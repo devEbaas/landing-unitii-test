@@ -1,6 +1,15 @@
+'use client'
+
 import Image from "next/image";
 
 export function CTA() {
+  const openUnitii = () => {
+    window.open(
+      "https://srv601906.hstgr.cloud/signin",
+      "_self",
+      "noopener noreferrer"
+    );
+  };
   return (
     <div className="bg-transparent  sm:bg-white">
       <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
@@ -34,12 +43,12 @@ export function CTA() {
               it all starts with the right connection.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-              <a
-                href="#"
+              <div
+                onClick={openUnitii}
                 className="rounded-md bg-[#2563EB] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
-                Get started
-              </a>
+                <p className="text-white text-xl">Get started</p>
+              </div>
             </div>
           </div>
           <div className="relative mt-16 h-80 lg:mt-8">

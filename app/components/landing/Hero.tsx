@@ -3,7 +3,7 @@ export function Hero() {
   const openUnitii = () => {
     window.open(
       "https://srv601906.hstgr.cloud/signin",
-      "",
+      "_self",
       "noopener noreferrer"
     );
   };
