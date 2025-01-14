@@ -3,25 +3,25 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Home", href: "/", current: true },
+  { name: "Privacy Policy", href: "/privacy", current: false },
+  { name: "Terms and Conditions", href: "/terms", current: false },
 ];
 
 export function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-50 px-32 bg-white/30 backdrop-blur-sm flex items-center justify-center">
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-6 lg:px-8"
+        className="flex items-center justify-between p-6 lg:px-8 max-w-7xl w-full"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+          <Link href="/" className="-m-1.5 p-1.5">
+            <span className="sr-only">Unitii</span>
             <Image
               alt="unitii logo"
               src="/logo-navbar.webp"
@@ -29,7 +29,7 @@ export function Header() {
               width={1420}
               height={690}
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -41,19 +41,19 @@ export function Header() {
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        {/* <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               className="text-sm/6 font-semibold text-gray-900"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
-        </div>
+        </div> */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="#" className="text-xl font-semibold text-gray-900">
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
         </div>

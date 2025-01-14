@@ -1,4 +1,12 @@
+'use client'
 export function Hero() {
+  const openUnitii = () => {
+    window.open(
+      "https://srv601906.hstgr.cloud/signin",
+      "",
+      "noopener noreferrer"
+    );
+  };
   return (
     <div className="bg-white">
       <div className="relative isolate px-6 pt-14 md:pt-0 lg:px-8">
@@ -33,12 +41,12 @@ export function Hero() {
               life with the perfect collaborators.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-[#2563EB] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              <div
+                onClick={openUnitii}
+                className="rounded-md bg-brand px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 hover:cursor-pointer"
               >
-                Get started
-              </a>
+                <p className="text-white text-xl">Get started</p>
+              </div>
             </div>
           </div>
         </div>
