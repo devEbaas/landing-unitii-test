@@ -1,5 +1,8 @@
 'use client'
+
 export function Hero() {
+
+  
   const openUnitii = () => {
     window.open(
       "https://srv601906.hstgr.cloud/signin",
@@ -33,15 +36,26 @@ export function Hero() {
             </div>
           </div> */}
           <div className="text-center">
-            <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+            <h1
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+              className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl"
+            >
               Connecting Innovators Worldwide
             </h1>
-            <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="700"
+              className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8"
+            >
               Discover the power of AI-driven matching to bring your ideas to
               life with the perfect collaborators.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <div
+                data-aos="fade-in"
+                data-aos-delay="1000"
                 onClick={openUnitii}
                 className="rounded-md bg-brand px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 hover:cursor-pointer"
               >
